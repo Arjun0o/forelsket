@@ -3,9 +3,9 @@ import React from "react";
 const ImageCard = ({ image }) => {
   function sortingTitle() {
     let titleToShow;
-    const title = image.title.split(" ");
-    if (title.length > 0) {
-      titleToShow = title.slice(0, 3);
+    const imageTitle = image.title.split(" ");
+    if (imageTitle.length > 0) {
+      titleToShow = imageTitle.slice(0, 3);
     }
     return titleToShow.join(" ");
   }
@@ -22,7 +22,7 @@ const ImageCard = ({ image }) => {
           Title : <span className="text-teal-900">{sortingTitle()}</span>
         </div>
         <div className="text-lg mb-2">
-          Artist :{" "}
+          Artist :
           <span className="text-teal-900">{image.principalOrFirstMaker}</span>
         </div>
       </div>
